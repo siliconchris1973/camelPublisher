@@ -1,9 +1,13 @@
 version: '2'
 services:
   rabbit:
-    image: "rabbitmq:management"
-    container_name: "rabbit"
-    hostname: "rabbit"
+    image: "rabbitmq:3.6.11-management"
     ports:
       - "15672:15672"
       - "5672:5672"
+    hostname: rabbit
+    environment:
+      - HOSTNAME=rabbit
+      - RABBITMQ_NODENAME=rabbit
+    volumes:
+      - /home/hw/rabbitmq:/var/lib/rabbitmq

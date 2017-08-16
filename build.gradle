@@ -19,12 +19,12 @@ repositories {
 }
 
 dependencies {
+
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
 
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-dependencies', version: 'Camden.SR7', ext: 'pom'
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-stream-rabbit', version: '1.2.1.RELEASE'
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-sleuth', version: '1.2.2.RELEASE'
+    compile group: 'org.apache.camel', name: 'camel-spring-boot-starter', version: '2.19.2'
+    compile group: 'org.apache.camel', name: 'camel-rabbitmq-starter', version: '2.19.2'
 
     compile group: 'org.projectlombok', name: 'lombok', version: '1.16.16'
 

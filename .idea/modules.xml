@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/test-spring-cloud-stream-source.iml" filepath="$PROJECT_DIR$/.idea/modules/test-spring-cloud-stream-source.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/test-spring-cloud-stream-source_main.iml" filepath="$PROJECT_DIR$/.idea/modules/test-spring-cloud-stream-source_main.iml" group="test-spring-cloud-stream-source" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/test-spring-cloud-stream-source_test.iml" filepath="$PROJECT_DIR$/.idea/modules/test-spring-cloud-stream-source_test.iml" group="test-spring-cloud-stream-source" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/test-rabbitmq-publisher.iml" filepath="$PROJECT_DIR$/.idea/modules/test-rabbitmq-publisher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/test-rabbitmq-publisher_main.iml" filepath="$PROJECT_DIR$/.idea/modules/test-rabbitmq-publisher_main.iml" group="test-rabbitmq-publisher" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/test-rabbitmq-publisher_test.iml" filepath="$PROJECT_DIR$/.idea/modules/test-rabbitmq-publisher_test.iml" group="test-rabbitmq-publisher" />
     </modules>
   </component>
 </project>

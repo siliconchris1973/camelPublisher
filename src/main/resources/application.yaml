@@ -3,20 +3,15 @@ spring:
     active:
       - "${user.name}"
 
-  cloud:
-    stream:
-      bindings:
-        output:
-          destination: ex.stream.out
-          group: test
-          binder: rabbit1
-      binders:
-        rabbit1:
-          type: rabbit
-          environment:
-            spring:
-              rabbitmq:
-                host: 172.17.0.1
-                port: 5672
-                username: guest
-                password: guest
+  camel:
+    rabbitmq:
+      host: localhost
+      port: 5672
+      username: guest
+      password: guest
+      confirm: true
+
+logging:
+  level:
+    org.apache.camel: INFO
+    de.immosolve: DEBUG
