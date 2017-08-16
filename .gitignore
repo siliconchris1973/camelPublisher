@@ -1,0 +1,22 @@
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+build/
+gradle.xml
+.gradle
+
+# IntelliJ IDEA
+/.idea/libraries
+/.idea/workspace.xml
+/.idea/tasks.xml
+/.idea/dbnavigator.xml
+*.iws
+*.ipr
+/out
+
+# Eclipse
+/bin
+.factorypath
+.apt_generated
