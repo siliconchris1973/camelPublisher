@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active:
+      - "${user.name}"
+
+  camel:
+    rabbitmq:
+      host: localhost
+      port: 5672
+      username: guest
+      password: guest
+      confirm: true
+
+logging:
+  level:
+    org.apache.camel: INFO
+    siliconchris1973: DEBUG

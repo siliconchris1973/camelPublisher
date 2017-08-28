@@ -1,0 +1,46 @@
+plugins {
+    id 'org.springframework.boot' version '1.5.4.RELEASE'
+}
+
+group 'siliconchris1973'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'maven'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+
+    compile group: 'org.apache.camel', name: 'camel-spring-boot-starter', version: '2.19.2'
+    compile group: 'org.apache.camel', name: 'camel-rabbitmq-starter', version: '2.19.2'
+
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.16.16'
+
+    testCompile(group: 'org.springframework.boot', name: 'spring-boot-starter-test') {
+        exclude(module: 'commons-logging')
+    }
+}
+
+jar {
+    manifest {
+        attributes(
+                'Implementation-Title': project.name,
+                'Implementation-Version': project.version,
+                'Built-By': System.getProperty('user.name'),
+                'Built-JDK': System.getProperty('java.version'),
+                'Target-Compatibility': project.targetCompatibility
+        )
+    }
+    archiveName 'app.jar'
+}
