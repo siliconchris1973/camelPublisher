@@ -54,8 +54,6 @@ public class RabbitMQRouteBuilder extends SpringRouteBuilder {
 				public void process(Exchange exchange) throws Exception {
 					exchange.getIn().setBody("test");
 					exchange.getIn().getHeaders().put("rabbitmq.DELIVERY_MODE", 2);
-					exchange.getIn().getHeaders().put("rabbitmq.ROUTING_KEY", "test");
-
 				}
 			})
 			.setExchangePattern(ExchangePattern.InOut)
@@ -63,7 +61,6 @@ public class RabbitMQRouteBuilder extends SpringRouteBuilder {
 					+ "?username=" + username //
 					+ "&password=" + password //
 					+ "&autoAck=" + !confirm
-					+ "&exchangeType=topic"
 					+ "&queue=test"
 					+ "&autoDelete=false"
 					+ "&requestTimeout=0")
